@@ -111,7 +111,7 @@ return array(
 		'mar' => 'mar',
 		'march' => 'Mar',
 		'may' => 'Mayıs',
-		'may_' => 'May',
+		'may_' => 'May',	// IGNORE
 		'mon' => 'Pzt',
 		'month' => 'ay',
 		'nov' => 'kas',
