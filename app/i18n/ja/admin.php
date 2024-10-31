@@ -84,7 +84,7 @@ return array(
 			'ok' => '正規表現ライブラリはインストールされています。 (PCRE).',
 		),
 		'pdo' => array(
-			'nok' => 'PD0あるいはサポートされているドライバーが見つかりませんでした。 (pdo_mysql, pdo_sqlite, pdo_pgsql).',
+			'nok' => 'PD0またはサポートされているドライバーが見つかりませんでした。 (pdo_mysql, pdo_sqlite, pdo_pgsql).',
 			'ok' => 'PD0とサポートされているドライバーはインストールされています。 (pdo_mysql, pdo_sqlite, pdo_pgsql).',
 		),
 		'php' => array(
@@ -116,6 +116,7 @@ return array(
 		'description' => '説明',
 		'disabled' => '無効',
 		'empty_list' => 'インストールされている拡張機能はありません',
+		'empty_list_help' => 'Check the logs to determine the reason behind the empty extension list.',	// TODO
 		'enabled' => '有効',
 		'latest' => 'インストール済み',
 		'name' => '名前',
@@ -187,7 +188,7 @@ return array(
 			),
 			'title' => 'ユーザー登録',
 		),
-		'sensitive-parameter' => 'センシティブなパラメーターです。<kbd>./data/config.php</kbd> を手動で編集',
+		'sensitive-parameter' => 'センシティブなパラメーターです。<kbd>./data/config.php</kbd> を手動で編集してください',
 		'tos' => array(
 			'disabled' => '無効化',
 			'enabled' => '<a href="./?a=tos">有効化</a>',
@@ -203,7 +204,7 @@ return array(
 		'changelog' => '変更履歴',
 		'check' => 'アップデートを確認する',
 		'copiedFromURL' => 'update.php が %s から ./data にコピーされました。',
-		'current_version' => '現在のバージョンは',
+		'current_version' => '現在のバージョン',
 		'last' => '最近の検証',
 		'loading' => '更新中…',
 		'none' => '更新を適用できません',

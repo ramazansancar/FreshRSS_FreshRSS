@@ -20,7 +20,7 @@ class FreshRSS_update_Controller extends FreshRSS_ActionController {
 				'Please git pull manually!');
 		}
 
-		exec('git -v', $output, $return);
+		exec('git --version', $output, $return);
 		if ($return != 0) {
 			throw new Minz_Exception("Error {$return} git not found: Please update manually!");
 		}
@@ -93,7 +93,7 @@ class FreshRSS_update_Controller extends FreshRSS_ActionController {
 	}
 
 	/** @return string|true */
-	public static function gitPull() {
+	public static function gitPull(): string|bool {
 		Minz_Log::notice(_t('admin.update.viaGit'));
 		$cwd = getcwd();
 		if ($cwd === false) {

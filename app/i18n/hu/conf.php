@@ -33,8 +33,9 @@ return array(
 	'display' => array(
 		'_' => 'Megjelenítés',
 		'darkMode' => array(
-			'_' => 'Automatikus sötét mód (béta)',
+			'_' => 'Automatikus sötét mód',
 			'auto' => 'Automatikus',
+			'help' => 'For compatible themes only',	// TODO
 			'no' => 'Nem',
 		),
 		'icon' => array(
@@ -98,6 +99,10 @@ return array(
 			'previous' => 'Előző',
 		),
 	),
+	'privacy' => array(
+		'_' => 'Privacy',	// TODO
+		'retrieve_extension_list' => 'Retrieve extension list',	// TODO
+	),
 	'profile' => array(
 		'_' => 'Profil kezelés',
 		'api' => 'API menedzsment',
@@ -114,6 +119,7 @@ return array(
 	'query' => array(
 		'_' => 'Felhasználói lekérdezések',
 		'deprecated' => 'Ez a lekérdezés már nem érvényes. A hivatkozott kategória vagy hírforrás törölve lett.',
+		'description' => 'Description',	// TODO
 		'filter' => array(
 			'_' => 'Alkalmazott szűrő:',
 			'categories' => 'Rendezés kategória szerint',
@@ -134,6 +140,7 @@ return array(
 		'get_important' => 'Cikkek megjelenítése fontos hírforrásokból',
 		'get_label' => ' „%s” címkével rendelkező cikkek megjelenítése',
 		'help' => 'Lásd a <a href="https://freshrss.github.io/FreshRSS/en/users/user_queries.html" target="_blank"> dokumentációt a felhasználói lekérdezések és HTML/RSS/OPML megosztás témákban</a>.',
+		'image_url' => 'Image URL',	// TODO
 		'name' => 'Név',
 		'no_filter' => 'Nincs szűrés',
 		'number' => '%d lekérdezés',
@@ -142,6 +149,7 @@ return array(
 		'search' => 'Keresés erre „%s”',
 		'share' => array(
 			'_' => 'Lekérdezés megosztása linkkel',
+			'greader' => 'Shareable link to the GReader JSON',	// TODO
 			'help' => 'Ezt a linket küldd el hogy megoszd a lekérdezést bárkivel',
 			'html' => 'Megosztható link a HTML oldalhoz',
 			'opml' => 'Megosztható link az OPML hírforrás listához',
@@ -169,6 +177,7 @@ return array(
 		'_' => 'Olvasás',
 		'after_onread' => 'Utána „minden megjelölése olvasottként”,',
 		'always_show_favorites' => 'Minden cikk megjelenítése a kedvencekben alapértelmezetten',
+		'apply_to_individual_feed' => 'Applies to feeds individually',	// TODO
 		'article' => array(
 			'authors_date' => array(
 				'_' => 'Szerzők és dátum',
@@ -183,6 +192,11 @@ return array(
 				'with_authors' => 'A szerzők és dátum sorban',
 			),
 			'feed_title' => 'Hírforrás címe',
+			'icons' => array(
+				'_' => 'Article icons position<br /><small>(Reading view only)</small>',	// TODO
+				'above_title' => 'Above title',	// TODO
+				'with_authors' => 'In authors and date row',	// TODO
+			),
 			'tags' => array(
 				'_' => 'Címkék',
 				'both' => 'Fejlécben és láblécben',
@@ -211,7 +225,7 @@ return array(
 		),
 		'hide_read_feeds' => 'Rejtse el a kategóriákat és hírforrásokat ahol nincs olvasatlan cikk (nem működik egyszerre a „Minden cikk megjelenítése” beállítással)',
 		'img_with_lazyload' => 'Használjon <em>lazy load</em> módot a képek betöltésére',
-		'jump_next' => 'ugorjon a következő olvasatlan testvérre (hírforrás vagy kategória)',
+		'jump_next' => 'ugorjon a következő olvasatlan testvérre',
 		'mark_updated_article_unread' => 'Frissített cikkek megjelölése olvasatlanként',
 		'number_divided_when_reader' => 'Olvasó módban 2-vel osztható szám.',
 		'read' => array(
@@ -223,7 +237,8 @@ return array(
 			'upon_gone' => 'ha már nincs benne a hírforrásban',
 			'upon_reception' => 'a cikk beérkezésekor',
 			'when' => 'Jelöljön meg egy cikket olvasottként…',
-			'when_same_title' => 'ha egy azonos című cikk már létezik a legújabb <i>n</i> számú cikk között',
+			'when_same_title_in_category' => 'if an identical title already exists in the top <i>n</i> newest articles of the category',	// TODO
+			'when_same_title_in_feed' => 'ha egy azonos című cikk már létezik a legújabb <i>n</i> számú cikk között (of the feed)',	// DIRTY
 		),
 		'show' => array(
 			'_' => 'Megjelenített cikkek',
@@ -242,6 +257,9 @@ return array(
 			'newer_first' => 'Újabb elöl',
 			'older_first' => 'Régebbi elöl',
 		),
+		'star' => array(
+			'when' => 'Mark an article as favourite…',	// TODO
+		),
 		'sticky_post' => 'A cikk gördüljön felülre, amikor megnyitásra kerül',
 		'title' => 'Olvasás',
 		'view' => array(
@@ -254,7 +272,6 @@ return array(
 	'sharing' => array(
 		'_' => 'Megosztás',
 		'add' => 'Megosztási mód hozzáadása',
-		'blogotext' => 'Blogotext',	// IGNORE
 		'deprecated' => 'Ez a szolgáltatás elavult, és el lesz távolítva a FreshRSS <a href="https://freshrss.github.io/FreshRSS/en/users/08_sharing_services.html" title="Dokumentáció további információkért" target="_blank">következő kiadásában.</a>.',
 		'diaspora' => 'Diaspora*',	// IGNORE
 		'email' => 'Email',	// IGNORE

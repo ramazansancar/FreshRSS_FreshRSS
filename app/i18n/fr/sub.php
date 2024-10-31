@@ -29,7 +29,9 @@ return array(
 			'help' => 'Fournir l’URL d’un <a href="http://opml.org/" target="_blank">fichier OPML</a> qui donnera dynamiquement la liste des flux de cette catégorie',
 		),
 		'empty' => 'Catégorie vide',
+		'expand' => 'Développer la catégorie',
 		'information' => 'Informations',
+		'open' => 'Ouvrir la catégorie',
 		'opml_url' => 'URL de l’OPML',
 		'position' => 'Position d’affichage',
 		'position_help' => 'Pour contrôler l’ordre de tri des catégories',
@@ -38,7 +40,7 @@ return array(
 	'feed' => array(
 		'accept_cookies' => 'Autoriser les cookies',
 		'accept_cookies_help' => 'Accepte les cookies du flux (stocké en mémoire seulement le temps de la requête)',
-		'add' => 'Ajouter un flux RSS',
+		'add' => 'Ajouter un flux',
 		'advanced' => 'Avancé',
 		'archiving' => 'Archivage',
 		'auth' => array(
@@ -61,7 +63,7 @@ return array(
 		'css_path' => 'Sélecteur CSS des articles sur le site d’origine',
 		'css_path_filter' => array(
 			'_' => 'Sélecteur CSS des éléments à supprimer',
-			'help' => 'Un sélecteur CSS peut être une liste comme : <kbd>.footer, .aside</kbd>',
+			'help' => 'Un sélecteur CSS peut être une liste comme : <kbd>.footer, .aside, p[data-sanitized-class="menu"]</kbd>',
 		),
 		'description' => 'Description',	// IGNORE
 		'empty' => 'Ce flux est vide. Veuillez vérifier qu’il est toujours maintenu.',
@@ -75,10 +77,19 @@ return array(
 			'_' => 'Filtres d’action',
 			'help' => 'Écrivez une recherche par ligne. Voir la <a href="https://freshrss.github.io/FreshRSS/fr/users/03_Main_view.html#gr%C3%A2ce-au-champ-de-recherche" target="_blank">documentation des opérateurs</a>.',
 		),
+		'http_headers' => 'Entêtes HTTP',
+		'http_headers_help' => 'Un entête HTTP par ligne, avec le nom et la valeur séparés par un deux-points (ex. : <kbd><code>Accept: application/atom+xml<br />Authorization: Bearer some-token</code></kbd>).',
 		'information' => 'Informations',
 		'keep_min' => 'Nombre minimum d’articles à conserver',
 		'kind' => array(
 			'_' => 'Type de source de flux',
+			'html_json' => array(
+				'_' => 'HTML + XPath + JSON notation point (JSON dans HTML)',
+				'xpath' => array(
+					'_' => 'XPath pour JSON dans HTML',
+					'help' => 'Exemple : <code>//script[@type="application/json"]</code>',
+				),
+			),
 			'html_xpath' => array(
 				'_' => 'HTML + XPath (Moissonnage du Web)',
 				'feed_title' => array(
@@ -135,7 +146,7 @@ return array(
 				'help' => 'La notation point pour JSON utilise le point comme séparateur objet, et des crochets pour un tableau : (ex : <code>data.items[0].title</code>)',
 				'item' => array(
 					'_' => 'trouver les <strong>articles</strong><br /><small>(c’est le plus important)</small>',
-					'help' => 'Chemin vers le tableau contenant les articles, par exemple <code>newsItems</code>',
+					'help' => 'Chemin vers le tableau contenant les articles, par exemple <code>$</code> ou <code>newsItems</code>',
 				),
 				'item_author' => 'auteur de l’article',
 				'item_categories' => 'catégories (tags) de l’article',
@@ -183,9 +194,13 @@ return array(
 		'method_help' => 'Les données POST supportent automatiquement <code>application/x-www-form-urlencoded</code> et <code>application/json</code>',
 		'method_postparams' => 'Données pour POST',
 		'moved_category_deleted' => 'Lors de la suppression d’une catégorie, ses flux seront automatiquement classés dans <em>%s</em>.',
-		'mute' => 'désactivé',
+		'mute' => array(
+			'_' => 'désactivé',
+			'state_is_muted' => 'Ce flux est désactivé',
+		),
 		'no_selected' => 'Aucun flux sélectionné.',
 		'number_entries' => '%d articles',	// IGNORE
+		'open_feed' => 'Ouvrir le flux %s',
 		'priority' => array(
 			'_' => 'Visibilité',
 			'archived' => 'Ne pas afficher (archivé)',
@@ -213,6 +228,16 @@ return array(
 		'title' => 'Titre',
 		'title_add' => 'Ajouter un flux RSS',
 		'ttl' => 'Ne pas automatiquement rafraîchir plus souvent que',
+		'unicityCriteria' => array(
+			'_' => 'Critère d’unicité des articles',
+			'forced' => '<span title="Bloque le critère d’unicité même en cas de doublons">forcé</span>',
+			'help' => 'Utile pour les flux invalides.<br />⚠️ Changer le critère peut créer des doublons.',
+			'id' => 'ID standard (défaut)',
+			'link' => 'Lien',
+			'sha1:link_published' => 'Lien + Date',
+			'sha1:link_published_title' => 'Lien + Date + Titre',
+			'sha1:link_published_title_content' => 'Lien + Date + Titre + Contenu',
+		),
 		'url' => 'URL du flux',
 		'useragent' => 'Sélectionner l’agent utilisateur pour télécharger ce flux',
 		'useragent_help' => 'Exemple : <kbd>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0)</kbd>',
@@ -221,7 +246,10 @@ return array(
 		'websub' => 'Notifications instantanée par WebSub',
 	),
 	'import_export' => array(
-		'export' => 'Exporter',
+		'export' => array(
+			'_' => 'Exporter',
+			'sqlite' => 'Télécharger la base de donnée de l’utilisateur au format SQLite',
+		),
 		'export_labelled' => 'Exporter les articles étiquetés',
 		'export_opml' => 'Exporter la liste des flux (OPML)',
 		'export_starred' => 'Exporter les favoris',

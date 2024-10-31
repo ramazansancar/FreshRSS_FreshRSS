@@ -33,8 +33,9 @@ return array(
 	'display' => array(
 		'_' => 'Display',
 		'darkMode' => array(
-			'_' => 'Automatic dark mode (beta)',
+			'_' => 'Automatic dark mode',
 			'auto' => 'Auto',
+			'help' => 'For compatible themes only',
 			'no' => 'No',
 		),
 		'icon' => array(
@@ -98,6 +99,10 @@ return array(
 			'previous' => 'Previous',
 		),
 	),
+	'privacy' => array(
+		'_' => 'Privacy',	// TODO
+		'retrieve_extension_list' => 'Retrieve extension list',	// TODO
+	),
 	'profile' => array(
 		'_' => 'Profile management',
 		'api' => 'API management',
@@ -114,6 +119,7 @@ return array(
 	'query' => array(
 		'_' => 'User queries',
 		'deprecated' => 'This query is no longer valid. The referenced category or feed has been deleted.',
+		'description' => 'Description',
 		'filter' => array(
 			'_' => 'Filter applied:',
 			'categories' => 'Display by category',
@@ -134,6 +140,7 @@ return array(
 		'get_important' => 'Display articles from important feeds',
 		'get_label' => 'Display articles with “%s” label',
 		'help' => 'See the <a href="https://freshrss.github.io/FreshRSS/en/users/user_queries.html" target="_blank">documentation for user queries and resharing by HTML / RSS / OPML</a>.',
+		'image_url' => 'Image URL',
 		'name' => 'Name',
 		'no_filter' => 'No filter',
 		'number' => 'Query n°%d',
@@ -142,6 +149,7 @@ return array(
 		'search' => 'Search for “%s”',
 		'share' => array(
 			'_' => 'Share this query by link',
+			'greader' => 'Shareable link to the GReader JSON',
 			'help' => 'Give this link if you want to share this query with anyone',
 			'html' => 'Shareable link to the HTML page',
 			'opml' => 'Shareable link to the OPML list of feeds',
@@ -169,6 +177,7 @@ return array(
 		'_' => 'Reading',
 		'after_onread' => 'After “mark all as read”,',
 		'always_show_favorites' => 'Show all articles in favourites by default',
+		'apply_to_individual_feed' => 'Applies to feeds individually',	// TODO
 		'article' => array(
 			'authors_date' => array(
 				'_' => 'Authors and date',
@@ -183,6 +192,11 @@ return array(
 				'with_authors' => 'In authors and date row',
 			),
 			'feed_title' => 'Feed title',
+			'icons' => array(
+				'_' => 'Article icons position<br /><small>(Reading view only)</small>',
+				'above_title' => 'Above title',
+				'with_authors' => 'In authors and date row',
+			),
 			'tags' => array(
 				'_' => 'Tags',
 				'both' => 'In header and footer',
@@ -211,7 +225,7 @@ return array(
 		),
 		'hide_read_feeds' => 'Hide categories & feeds with no unread articles (does not work with “Show all articles” configuration)',
 		'img_with_lazyload' => 'Use <em>lazy load</em> mode to load pictures',
-		'jump_next' => 'jump to next unread sibling (feed or category)',
+		'jump_next' => 'jump to next unread sibling',
 		'mark_updated_article_unread' => 'Mark updated articles as unread',
 		'number_divided_when_reader' => 'Divide by 2 in the reading view.',
 		'read' => array(
@@ -223,7 +237,8 @@ return array(
 			'upon_gone' => 'when it is no longer in the upstream news feed',
 			'upon_reception' => 'upon receiving the article',
 			'when' => 'Mark an article as read…',
-			'when_same_title' => 'if an identical title already exists in the top <i>n</i> newest articles',
+			'when_same_title_in_category' => 'if an identical title already exists in the top <i>n</i> newest articles of the category',
+			'when_same_title_in_feed' => 'if an identical title already exists in the top <i>n</i> newest articles of the feed',
 		),
 		'show' => array(
 			'_' => 'Articles to display',
@@ -242,6 +257,9 @@ return array(
 			'newer_first' => 'Newest first',
 			'older_first' => 'Oldest first',
 		),
+		'star' => array(
+			'when' => 'Mark an article as favourite…',
+		),
 		'sticky_post' => 'Stick the article to the top when opened',
 		'title' => 'Reading',
 		'view' => array(
@@ -254,7 +272,6 @@ return array(
 	'sharing' => array(
 		'_' => 'Sharing',
 		'add' => 'Add a sharing method',
-		'blogotext' => 'Blogotext',
 		'deprecated' => 'This service is deprecated and will be removed from FreshRSS in a <a href="https://freshrss.github.io/FreshRSS/en/users/08_sharing_services.html" title="Open documentation for more information" target="_blank">future release</a>.',
 		'diaspora' => 'Diaspora*',
 		'email' => 'Email',

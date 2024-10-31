@@ -29,7 +29,9 @@ return array(
 			'help' => '使用地址上的 <a href="http://opml.org/" target="_blank">OPML 文件</a> 中的訂閱源填充這一分類',
 		),
 		'empty' => '空分類',
-		'information' => '信息',
+		'expand' => '展開分類',
+		'information' => '資訊',
+		'open' => '打開分類',
 		'opml_url' => 'OPML 地址',
 		'position' => '顯示位置',
 		'position_help' => '控制分類排列順序',
@@ -61,24 +63,33 @@ return array(
 		'css_path' => '原文的 CSS 選擇器',
 		'css_path_filter' => array(
 			'_' => '需移除元素的 CSS 選擇器',
-			'help' => '可設置多個 CSS 選擇器，例如：<kbd>.footer, .aside</kbd>',
+			'help' => '可設置多個 CSS 選擇器，例如：<kbd>.footer, .aside, p[data-sanitized-class="menu"]</kbd>',
 		),
 		'description' => '描述',
 		'empty' => '此源為空。請確認它是否正常更新。',
 		'error' => '此源遇到一些問題。請在確認是否能正常訪問後重試。',
 		'export-as-opml' => array(
-			'download' => 'Download',	// TODO
+			'download' => '下載',
 			'help' => 'XML file (data subset. <a href="https://freshrss.github.io/FreshRSS/en/developers/OPML.html" target="_blank">See documentation</a>)',	// TODO
-			'label' => 'Export as OPML',	// TODO
+			'label' => '匯出為OPML',
 		),
 		'filteractions' => array(
 			'_' => '過濾動作',
 			'help' => '每行寫一條過濾搜尋 Operators <a href="https://freshrss.github.io/FreshRSS/en/users/10_filter.html#with-the-search-field" target="_blank">see documentation</a>.',	// DIRTY
 		),
+		'http_headers' => 'HTTP Headers',	// TODO
+		'http_headers_help' => 'Headers are separated by a newline, and the name and value of a header are separated by a colon (e.g: <kbd><code>Accept: application/atom+xml<br />Authorization: Bearer some-token</code></kbd>).',	// TODO
 		'information' => '信息',
 		'keep_min' => '至少保存的文章數',
 		'kind' => array(
 			'_' => '訂閱源類型',
+			'html_json' => array(
+				'_' => 'HTML + XPath + JSON dot notation (JSON in HTML)',	// TODO
+				'xpath' => array(
+					'_' => 'XPath for JSON in HTML',	// TODO
+					'help' => 'Example: <code>//script[@type="application/json"]</code>',	// TODO
+				),
+			),
 			'html_xpath' => array(
 				'_' => 'HTML + XPath (Web 抓取)',
 				'feed_title' => array(
@@ -104,8 +115,8 @@ return array(
 					'help' => '例如 <code>descendant::img/@src</code>',
 				),
 				'item_timeFormat' => array(
-					'_' => 'Custom date/time format',	// TODO
-					'help' => 'Optional. A format supported by <a href="https://php.net/datetime.createfromformat" target="_blank"><code>DateTime::createFromFormat()</code></a> such as <code>d-m-Y H:i:s</code>',	// TODO
+					'_' => '自訂日期/時間格式',
+					'help' => '可選的。支援的格式<a href="https://php.net/datetime.createfromformat" target="_blank"><code>DateTime::createFromFormat()</code></a> 例如 <code>d-m-Y H:i:s</code>',
 				),
 				'item_timestamp' => array(
 					'_' => '文章日期：',
@@ -135,7 +146,7 @@ return array(
 				'help' => 'A JSON dot notated uses dots between objects and brackets for arrays (e.g. <code>data.items[0].title</code>)',	// TODO
 				'item' => array(
 					'_' => '找尋新聞 <strong>項目</strong><br /><small>(最重要的)</small>',
-					'help' => 'JSON path to the array containing the items, e.g. <code>newsItems</code>',	// TODO
+					'help' => 'JSON path to the array containing the items, e.g. <code>$</code> or <code>newsItems</code>',	// TODO
 				),
 				'item_author' => '項目作者',
 				'item_categories' => '項目標籤',
@@ -183,9 +194,13 @@ return array(
 		'method_help' => 'The POST payload has automatic support for <code>application/x-www-form-urlencoded</code> and <code>application/json</code>',	// TODO
 		'method_postparams' => 'Payload for POST',	// TODO
 		'moved_category_deleted' => '刪除分類時，其中的訂閱源會自動歸類到 <em>%s</em>',
-		'mute' => '暫停',
+		'mute' => array(
+			'_' => '暫停',
+			'state_is_muted' => 'This feed is muted',	// TODO
+		),
 		'no_selected' => '未選擇訂閱源',
 		'number_entries' => '%d 篇文章',
+		'open_feed' => 'Open feed %s',	// TODO
 		'priority' => array(
 			'_' => '可見性',
 			'archived' => '不顯示（歸檔）',
@@ -213,6 +228,16 @@ return array(
 		'title' => '標題',
 		'title_add' => '添加訂閱源',
 		'ttl' => '最小自動更新間隔',
+		'unicityCriteria' => array(
+			'_' => 'Article unicity criteria',	// TODO
+			'forced' => '<span title="Block the unicity criteria, even when the feed has duplicate articles">forced</span>',	// TODO
+			'help' => 'Relevant for invalid feeds.<br />⚠️ Changing the policy will create duplicates.',	// TODO
+			'id' => 'Standard ID (default)',	// TODO
+			'link' => 'Link',	// TODO
+			'sha1:link_published' => 'Link + Date',	// TODO
+			'sha1:link_published_title' => 'Link + Date + Title',	// TODO
+			'sha1:link_published_title_content' => 'Link + Date + Title + Content',	// TODO
+		),
 		'url' => '源地址',
 		'useragent' => '設置用於獲取此源的 User Agent',
 		'useragent_help' => '例：<kbd>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0)</kbd>',
@@ -221,7 +246,10 @@ return array(
 		'websub' => 'WebSub 即時通知',
 	),
 	'import_export' => array(
-		'export' => '導出',
+		'export' => array(
+			'_' => '導出',
+			'sqlite' => 'Download user database as SQLite',	// TODO
+		),
 		'export_labelled' => '導出有標籤的文章',
 		'export_opml' => '導出訂閱源列表（OPML）',
 		'export_starred' => '導出你的收藏',

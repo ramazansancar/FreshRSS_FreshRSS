@@ -81,8 +81,11 @@ class name `HelloWorldExtension`.
 In the file `freshrss/extensions/xExtension-HelloWorld/extension.php` you
 need the structure:
 ```html
-class HelloWorldExtension extends Minz_Extension {
+final class HelloWorldExtension extends Minz_Extension {
+	#[\Override]
 	public function init() {
+		parent::init();
+
 		// your code here
 	}
 }
@@ -192,6 +195,8 @@ final class HelloWorldExtension extends Minz_Extension
 {
 	#[\Override]
 	public function init(): void {
+		parent::init();
+
 		$this->registerHook('entry_before_display', [$this, 'renderEntry']);
 		$this->registerHook('check_url_before_add', [self::class, 'checkUrl']);
 	}
@@ -228,6 +233,8 @@ The following events are available:
 	executed when a feed is refreshed and new entries will be imported into
 	the database. The new entry (instance of FreshRSS\_Entry) will be passed
 	as parameter.
+* `entries_favorite` (`function(array $ids, bool $is_favorite): void`):
+	will be executed when some entries are marked or unmarked as favorites (starred)
 * `feed_before_actualize` (`function($feed) -> Feed | null`): will be
 	executed when a feed is updated. The feed (instance of FreshRSS\_Feed)
 	will be passed as parameter.

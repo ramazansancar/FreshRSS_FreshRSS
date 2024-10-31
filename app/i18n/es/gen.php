@@ -18,9 +18,10 @@ return array(
 		'back_to_rss_feeds' => '← regresar a tus fuentes RSS',
 		'cancel' => 'Cancelar',
 		'create' => 'Crear',
-		'delete_muted_feeds' => 'Eliminar feeds silenciados',
+		'delete_muted_feeds' => 'Eliminar fuentes silenciadas',
 		'demote' => 'Degradar',
 		'disable' => 'Desactivar',
+		'download' => 'Download',	// TODO
 		'empty' => 'Vaciar',
 		'enable' => 'Activar',
 		'export' => 'Exportar',
@@ -29,6 +30,14 @@ return array(
 		'load_default_shortcuts' => 'Cargar accesos directos predeterminados',
 		'manage' => 'Administrar',
 		'mark_read' => 'Marcar como leído',
+		'menu' => array(
+			'open' => 'Abrir menú',
+		),
+		'nav_buttons' => array(
+			'next' => 'Siguiente artículo',
+			'prev' => 'Anterior artículo',
+			'up' => 'Ir arriba',
+		),
 		'open_url' => 'Abrir URL',
 		'promote' => 'Promover',
 		'purge' => 'Eliminar',
@@ -41,7 +50,7 @@ return array(
 		'update' => 'Actualizar',
 	),
 	'auth' => array(
-		'accept_tos' => 'Acpeto los <a href="%s">Terminos de Servicio</a>.',
+		'accept_tos' => 'Acepto los <a href="%s">Términos de Servicio</a>.',
 		'email' => 'Correo electrónico',
 		'keep_logged_in' => 'Mantenerme identificado <small>(%s días)</small>',
 		'login' => 'Conectar',
@@ -126,7 +135,7 @@ return array(
 	),
 	'js' => array(
 		'category_empty' => 'Vaciar categoría',
-		'confirm_action' => '¿Seguyro que quieres hacerlo? No hay marcha atrás…',
+		'confirm_action' => '¿Seguro que quieres hacerlo? No hay marcha atrás…',
 		'confirm_action_feed_cat' => '¿Seguro que quieres hacerlo? Perderás todos los favoritos relacionados y las peticiones de usuario. ¡Y no hay marcha atrás!',
 		'feedback' => array(
 			'body_new_articles' => 'Hay %%d nuevos artículos para leer en FreshRSS.',
@@ -139,13 +148,14 @@ return array(
 		'should_be_activated' => 'JavaScript debe estar activado',
 	),
 	'lang' => array(
-		'cz' => 'Čeština',	// IGNORE
+		'cs' => 'Čeština',	// IGNORE
 		'de' => 'Deutsch',	// IGNORE
 		'el' => 'Ελληνικά',	// IGNORE
 		'en' => 'English',	// IGNORE
 		'en-us' => 'English (United States)',	// IGNORE
 		'es' => 'Español',	// IGNORE
 		'fa' => 'فارسی',	// IGNORE
+		'fi' => 'Suomi',	// IGNORE
 		'fr' => 'Français',	// IGNORE
 		'he' => 'עברית',	// IGNORE
 		'hu' => 'Magyar',	// IGNORE
@@ -175,6 +185,7 @@ return array(
 		'display' => 'Visualización',
 		'extensions' => 'Extensiones',
 		'logs' => 'Registros',
+		'privacy' => 'Privacy',	// TODO
 		'queries' => 'Peticiones de usuario',
 		'reading' => 'Lectura',
 		'search' => 'Buscar palabras o #etiquetas',
@@ -188,7 +199,7 @@ return array(
 		'user_profile' => 'Perfil',
 	),
 	'period' => array(
-		'days' => 'dias',
+		'days' => 'días',
 		'hours' => 'horas',
 		'months' => 'meses',
 		'weeks' => 'semanas',
@@ -196,9 +207,9 @@ return array(
 	),
 	'share' => array(
 		'Known' => 'Sitios basados en conocidos',
+		'archiveIS' => 'archive.is',	// IGNORE
 		'archiveORG' => 'archive.org',	// IGNORE
 		'archivePH' => 'archive.ph',	// IGNORE
-		'blogotext' => 'Blogotext',	// IGNORE
 		'buffer' => 'Buffer',	// IGNORE
 		'clipboard' => 'Portapapeles',
 		'diaspora' => 'Diaspora*',	// IGNORE
@@ -220,6 +231,7 @@ return array(
 		'raindrop' => 'Raindrop.io',	// IGNORE
 		'reddit' => 'Reddit',	// IGNORE
 		'shaarli' => 'Shaarli',	// IGNORE
+		'telegram' => 'Telegram',	// IGNORE
 		'twitter' => 'Twitter',	// IGNORE
 		'wallabag' => 'wallabag v1',	// IGNORE
 		'wallabagv2' => 'wallabag v2',	// IGNORE

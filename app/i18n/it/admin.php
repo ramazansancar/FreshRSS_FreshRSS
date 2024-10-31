@@ -116,6 +116,7 @@ return array(
 		'description' => 'Descrizione',
 		'disabled' => 'Disabilitata',
 		'empty_list' => 'Non ci sono estensioni installate',
+		'empty_list_help' => 'Check the logs to determine the reason behind the empty extension list.',	// TODO
 		'enabled' => 'Abilitata',
 		'latest' => 'Installato',
 		'name' => 'Nome',
@@ -205,7 +206,7 @@ return array(
 		'copiedFromURL' => 'update.php copiato da %s a ./data',
 		'current_version' => 'Versione',
 		'last' => 'Ultima verifica',
-		'loading' => 'Aggiornamentose…',
+		'loading' => 'Aggiornamento…',
 		'none' => 'Nessun aggiornamento da applicare',
 		'releaseChannel' => array(
 			'_' => 'Canale di rilascio',

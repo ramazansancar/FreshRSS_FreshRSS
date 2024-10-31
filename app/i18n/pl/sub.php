@@ -29,7 +29,9 @@ return array(
 			'help' => 'Podaj adres <a href="http://opml.org/" target="_blank">pliku OPML</a>, aby dynamicznie zapełnić tę kategorię kanałami',
 		),
 		'empty' => 'Pusta kategoria',
+		'expand' => 'Expand category',	// TODO
 		'information' => 'Informacje',
+		'open' => 'Open category',	// TODO
 		'opml_url' => 'Adres OPML',
 		'position' => 'Miejsce wyświetlania',
 		'position_help' => 'Kontrola porządku sortowania kategorii',
@@ -61,7 +63,7 @@ return array(
 		'css_path' => 'Selektor CSS dla wiadomości na pierwotnej stronie',
 		'css_path_filter' => array(
 			'_' => 'Selektor CSS elementów do usunięcia',
-			'help' => 'Selector CSS może być listą, na przykład: <kbd>.footer, .aside</kbd>',
+			'help' => 'Selector CSS może być listą, na przykład: <kbd>.footer, .aside, p[data-sanitized-class="menu"]</kbd>',
 		),
 		'description' => 'Opis',
 		'empty' => 'Ten kanał jest pusty. Należy sprawdzić czy kanał w dalszym ciągu działa.',
@@ -75,10 +77,19 @@ return array(
 			'_' => 'Akcje filtrowania',
 			'help' => 'Jedno zapytanie na linię. Operatory opisane są w <a href="https://freshrss.github.io/FreshRSS/en/users/10_filter.html#with-the-search-field" target="_blank">dokumentacji</a>.',
 		),
+		'http_headers' => 'HTTP Headers',	// TODO
+		'http_headers_help' => 'Headers are separated by a newline, and the name and value of a header are separated by a colon (e.g: <kbd><code>Accept: application/atom+xml<br />Authorization: Bearer some-token</code></kbd>).',	// TODO
 		'information' => 'Informacja',
 		'keep_min' => 'Minimalna liczba wiadomości do do przechowywania',
 		'kind' => array(
 			'_' => 'Rodzaj źródła kanału',
+			'html_json' => array(
+				'_' => 'HTML + XPath + JSON dot notation (JSON in HTML)',	// TODO
+				'xpath' => array(
+					'_' => 'XPath for JSON in HTML',	// TODO
+					'help' => 'Example: <code>//script[@type="application/json"]</code>',	// TODO
+				),
+			),
 			'html_xpath' => array(
 				'_' => 'HTML + XPath (Web scraping)',	// IGNORE
 				'feed_title' => array(
@@ -135,7 +146,7 @@ return array(
 				'help' => 'JSON oddzielający obiekty kropkami i używający nawiasów kwadratowych dla tablic (na przykład <code>data.items[0].title</code>)',
 				'item' => array(
 					'_' => 'odnajdywanie <strong>wiadomości</strong><br /><small>(najważniejsze)</small>',
-					'help' => 'Ścieżka w JSON-ie do tablicy zawierającej wiadomości, na przykład <code>newsItems</code>',
+					'help' => 'Ścieżka w JSON-ie do tablicy zawierającej wiadomości, na przykład <code>$</code> or <code>newsItems</code>',	// DIRTY
 				),
 				'item_author' => 'autor wiadomości',
 				'item_categories' => 'tagi wiadomości',
@@ -183,9 +194,13 @@ return array(
 		'method_help' => 'Ładunek w POST automatycznie wspiera <code>application/x-www-form-urlencoded</code> oraz <code>application/json</code>',
 		'method_postparams' => 'Ładunek w POST',
 		'moved_category_deleted' => 'Po usunięciu kategorii znajdujące się w niej kanały zostaną automatycznie przeniesione do <em>%s</em>.',
-		'mute' => 'wycisz',
+		'mute' => array(
+			'_' => 'wycisz',
+			'state_is_muted' => 'This feed is muted',	// TODO
+		),
 		'no_selected' => 'Brak kanałów.',
 		'number_entries' => '%d wiadomości',
+		'open_feed' => 'Open feed %s',	// TODO
 		'priority' => array(
 			'_' => 'Widoczność',
 			'archived' => 'Nie pokazuj (zarchiwizowany)',
@@ -213,6 +228,16 @@ return array(
 		'title' => 'Tytuł',
 		'title_add' => 'Dodaj kanał',
 		'ttl' => 'Nie odświeżaj automatycznie częściej niż',
+		'unicityCriteria' => array(
+			'_' => 'Article unicity criteria',	// TODO
+			'forced' => '<span title="Block the unicity criteria, even when the feed has duplicate articles">forced</span>',	// TODO
+			'help' => 'Relevant for invalid feeds.<br />⚠️ Changing the policy will create duplicates.',	// TODO
+			'id' => 'Standard ID (default)',	// TODO
+			'link' => 'Link',	// TODO
+			'sha1:link_published' => 'Link + Date',	// TODO
+			'sha1:link_published_title' => 'Link + Date + Title',	// TODO
+			'sha1:link_published_title_content' => 'Link + Date + Title + Content',	// TODO
+		),
 		'url' => 'Adres kanału',
 		'useragent' => 'Ciąg user agent używany podczas pobierania kanału',
 		'useragent_help' => 'Przykład: <kbd>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0)</kbd>',
@@ -221,7 +246,10 @@ return array(
 		'websub' => 'Natychmiastowe powiadomienia protokołu WebSub',
 	),
 	'import_export' => array(
-		'export' => 'Eksport',
+		'export' => array(
+			'_' => 'Eksport',
+			'sqlite' => 'Download user database as SQLite',	// TODO
+		),
 		'export_labelled' => 'Eksportuj wiadomości z etykietami',
 		'export_opml' => 'Eksportuj listę kanałów (format OPML)',
 		'export_starred' => 'Eksportuj ulubione wiadomości',

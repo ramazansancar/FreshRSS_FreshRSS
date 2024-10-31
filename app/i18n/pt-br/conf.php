@@ -33,8 +33,9 @@ return array(
 	'display' => array(
 		'_' => 'Exibição',
 		'darkMode' => array(
-			'_' => 'Modo noturno automático (beta)',
+			'_' => 'Modo noturno automático',
 			'auto' => 'Automático',
+			'help' => 'For compatible themes only',	// TODO
 			'no' => 'Não',
 		),
 		'icon' => array(
@@ -98,6 +99,10 @@ return array(
 			'previous' => 'Anterior',
 		),
 	),
+	'privacy' => array(
+		'_' => 'Privacy',	// TODO
+		'retrieve_extension_list' => 'Retrieve extension list',	// TODO
+	),
 	'profile' => array(
 		'_' => 'Gerenciamento de perfil',
 		'api' => 'Administração da API',
@@ -114,6 +119,7 @@ return array(
 	'query' => array(
 		'_' => 'Consultas do usuário',
 		'deprecated' => 'Esta não é mais válida. A categoria ou feed relacionado foi deletado.',
+		'description' => 'Description',	// TODO
 		'filter' => array(
 			'_' => 'Filtro aplicado:',
 			'categories' => 'Exibir por categoria',
@@ -134,6 +140,7 @@ return array(
 		'get_important' => 'Exibir artigos de feeds importantes',
 		'get_label' => 'Exibir artigos com rótulo “%s”',
 		'help' => 'Veja a <a href="https://freshrss.github.io/FreshRSS/en/users/user_queries.html" target="_blank">documentação para consultas de usuários e recompartilhamentos por HTML / RSS / OPML</a>.',
+		'image_url' => 'Image URL',	// TODO
 		'name' => 'Nome',
 		'no_filter' => 'Sem filtro',
 		'number' => 'Consulta n°%d',
@@ -142,6 +149,7 @@ return array(
 		'search' => 'Busca por “%s”',
 		'share' => array(
 			'_' => 'Compartilhar esta consulta por link',
+			'greader' => 'Shareable link to the GReader JSON',	// TODO
 			'help' => 'Forneça este link se quiser compartilhar esta consulta com alguém',
 			'html' => 'Link compartilhável para a página HTML',
 			'opml' => 'Link compartilhável para a lista de feeds OPML',
@@ -169,6 +177,7 @@ return array(
 		'_' => 'Leitura',
 		'after_onread' => 'Depois de “marcar todos como lido”,',
 		'always_show_favorites' => 'Mostrar todos os artivos nos favoritos por padrão',
+		'apply_to_individual_feed' => 'Applies to feeds individually',	// TODO
 		'article' => array(
 			'authors_date' => array(
 				'_' => 'Autores e Data',
@@ -183,6 +192,11 @@ return array(
 				'with_authors' => 'Com autores e data',
 			),
 			'feed_title' => 'Título do Feed',
+			'icons' => array(
+				'_' => 'Article icons position<br /><small>(Reading view only)</small>',	// TODO
+				'above_title' => 'Above title',	// TODO
+				'with_authors' => 'In authors and date row',	// TODO
+			),
 			'tags' => array(
 				'_' => 'Tag',
 				'both' => 'No cabeçalho e rodapé',
@@ -211,7 +225,7 @@ return array(
 		),
 		'hide_read_feeds' => 'Esconder categorias e feeds com nenhum artigo não lido (não funciona com a configuração “Mostrar todos os artigos”)',
 		'img_with_lazyload' => 'Utilizar o modo <em>lazy load</em> para carregar as imagens',
-		'jump_next' => 'Vá para o próximo irmão não lido (feed ou categoria)',
+		'jump_next' => 'Vá para o próximo irmão não lido',
 		'mark_updated_article_unread' => 'Marcar artigos atualizados como não lidos',
 		'number_divided_when_reader' => 'Dividido por 2 no modo de leitura .',
 		'read' => array(
@@ -223,7 +237,8 @@ return array(
 			'upon_gone' => 'Quando não estiver mais no feed de notícias principais',
 			'upon_reception' => 'ao receber um artigo',
 			'when' => 'Marcar artigo como lido…',
-			'when_same_title' => 'Se um título idêntico já existir nos últimos <i>n</i> artigos mais novos',
+			'when_same_title_in_category' => 'if an identical title already exists in the top <i>n</i> newest articles of the category',	// TODO
+			'when_same_title_in_feed' => 'Se um título idêntico já existir nos últimos <i>n</i> artigos mais novos (of the feed)',	// DIRTY
 		),
 		'show' => array(
 			'_' => 'Artigos para exibir',
@@ -242,6 +257,9 @@ return array(
 			'newer_first' => 'Novos primeiro',
 			'older_first' => 'Antigos primeiro',
 		),
+		'star' => array(
+			'when' => 'Mark an article as favourite…',	// TODO
+		),
 		'sticky_post' => 'Coloque o artigo no topo quando aberto',
 		'title' => 'Lendo',
 		'view' => array(
@@ -254,7 +272,6 @@ return array(
 	'sharing' => array(
 		'_' => 'Compartilhando',
 		'add' => 'Adicionar um método de compartilhamento',
-		'blogotext' => 'Blogotext',	// IGNORE
 		'deprecated' => 'Este serviço está obceloeto e será removido do FreshRSS <a href="https://freshrss.github.io/FreshRSS/en/users/08_sharing_services.html" title="Abra este documento para mais informações" target="_blank">em versões futuras</a>.',
 		'diaspora' => 'Diaspora*',	// IGNORE
 		'email' => 'E-mail',

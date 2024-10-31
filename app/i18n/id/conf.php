@@ -33,8 +33,9 @@ return array(
 	'display' => array(
 		'_' => 'Tampilan',
 		'darkMode' => array(
-			'_' => 'Mode gelap otomatis (beta)',
+			'_' => 'Mode gelap otomatis',
 			'auto' => 'Otomatis',
+			'help' => 'For compatible themes only',	// TODO
 			'no' => 'Tidak',
 		),
 		'icon' => array(
@@ -98,6 +99,10 @@ return array(
 			'previous' => 'Sebelumnya',
 		),
 	),
+	'privacy' => array(
+		'_' => 'Privacy',	// TODO
+		'retrieve_extension_list' => 'Retrieve extension list',	// TODO
+	),
 	'profile' => array(
 		'_' => 'Manajemen Profil',
 		'api' => 'Manajemen API',
@@ -114,6 +119,7 @@ return array(
 	'query' => array(
 		'_' => 'Permintaan Pengguna',
 		'deprecated' => 'Permintaan ini tidak valid lagi. Kategori atau feed yang dirujuk telah dihapus.',
+		'description' => 'Description',	// TODO
 		'filter' => array(
 			'_' => 'Filter yang diterapkan:',
 			'categories' => 'Tampilkan berdasarkan kategori',
@@ -134,6 +140,7 @@ return array(
 		'get_important' => 'Tampilkan artikel dari feed penting',
 		'get_label' => 'Tampilkan artikel dengan label "%s"',
 		'help' => 'Lihat <a href="https://freshrss.github.io/FreshRSS/en/users/user_queries.html" target="_blank">dokumentasi untuk permintaan pengguna dan berbagi ulang melalui HTML / RSS / OPML</a>.',
+		'image_url' => 'Image URL',	// TODO
 		'name' => 'Nama',
 		'no_filter' => 'Tanpa filter',
 		'number' => 'Permintaan n°%d',
@@ -142,6 +149,7 @@ return array(
 		'search' => 'Cari untuk "%s"',
 		'share' => array(
 			'_' => 'Bagikan permintaan ini melalui tautan',
+			'greader' => 'Shareable link to the GReader JSON',	// TODO
 			'help' => 'Berikan tautan ini jika Anda ingin berbagi permintaan ini dengan siapa pun',
 			'html' => 'Tautan dapat dibagikan ke halaman HTML',
 			'opml' => 'Tautan dapat dibagikan ke daftar OPML dari feed',
@@ -169,6 +177,7 @@ return array(
 		'_' => 'Membaca',
 		'after_onread' => 'Setelah “tandai semua sebagai telah dibaca”',
 		'always_show_favorites' => 'Selalu tampilkan semua artikel favorit secara default',
+		'apply_to_individual_feed' => 'Applies to feeds individually',	// TODO
 		'article' => array(
 			'authors_date' => array(
 				'_' => 'Penulis dan tanggal',
@@ -183,6 +192,11 @@ return array(
 				'with_authors' => 'Di baris penulis dan tanggal',
 			),
 			'feed_title' => 'Judul feed',
+			'icons' => array(
+				'_' => 'Article icons position<br /><small>(Reading view only)</small>',	// TODO
+				'above_title' => 'Above title',	// TODO
+				'with_authors' => 'In authors and date row',	// TODO
+			),
 			'tags' => array(
 				'_' => 'Tag',
 				'both' => 'Di header dan footer',
@@ -211,7 +225,7 @@ return array(
 		),
 		'hide_read_feeds' => 'Sembunyikan kategori & feed yang tidak memiliki artikel belum dibaca (tidak berlaku untuk konfigurasi “Tampilkan semua artikel”)',
 		'img_with_lazyload' => 'Gunakan mode “lazy load” untuk memuat gambar',
-		'jump_next' => 'loncat ke saudara yang belum dibaca berikutnya (feed atau kategori)',
+		'jump_next' => 'loncat ke saudara yang belum dibaca berikutnya',
 		'mark_updated_article_unread' => 'Tandai artikel yang diperbarui sebagai belum dibaca',
 		'number_divided_when_reader' => 'Bagi dua dalam tampilan baca.',
 		'read' => array(
@@ -223,7 +237,8 @@ return array(
 			'upon_gone' => 'saat tidak lagi ada di feed berita atas',
 			'upon_reception' => 'saat menerima artikel',
 			'when' => 'Tandai artikel sebagai telah dibaca…',
-			'when_same_title' => 'jika judul identik sudah ada di <i>n</i> artikel terbaru',
+			'when_same_title_in_category' => 'if an identical title already exists in the top <i>n</i> newest articles of the category',	// TODO
+			'when_same_title_in_feed' => 'jika judul identik sudah ada di <i>n</i> artikel terbaru (of the feed)',	// DIRTY
 		),
 		'show' => array(
 			'_' => 'Artikel untuk ditampilkan',
@@ -242,6 +257,9 @@ return array(
 			'newer_first' => 'Terbaru dulu',
 			'older_first' => 'Terlama dulu',
 		),
+		'star' => array(
+			'when' => 'Mark an article as favourite…',	// TODO
+		),
 		'sticky_post' => 'Tempelkan artikel di bagian atas saat dibuka',
 		'title' => 'Membaca',
 		'view' => array(
@@ -254,7 +272,6 @@ return array(
 	'sharing' => array(
 		'_' => 'Sharing',	// TODO
 		'add' => 'Add a sharing method',	// TODO
-		'blogotext' => 'Blogotext',	// IGNORE
 		'deprecated' => 'This service is deprecated and will be removed from FreshRSS in a <a href="https://freshrss.github.io/FreshRSS/en/users/08_sharing_services.html" title="Open documentation for more information" target="_blank">future release</a>.',	// TODO
 		'diaspora' => 'Diaspora*',	// IGNORE
 		'email' => 'Email',	// TODO

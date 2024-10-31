@@ -17,8 +17,8 @@ class FreshRSS_View extends Minz_View {
 	public string $current_user;
 	/** @var iterable<FreshRSS_Entry> */
 	public $entries;
-	public FreshRSS_Entry $entry;
-	public FreshRSS_Feed $feed;
+	public ?FreshRSS_Entry $entry = null;
+	public ?FreshRSS_Feed $feed = null;
 	/** @var array<int,FreshRSS_Feed> */
 	public array $feeds;
 	public int $nbUnreadTags;
@@ -30,7 +30,7 @@ class FreshRSS_View extends Minz_View {
 	public array $tagsForEntries;
 	public bool $excludeMutedFeeds;
 
-	// Substriptions
+	// Subscriptions
 	public bool $displaySlider = false;
 	public bool $load_ok;
 	public bool $onlyFeedsWithError;
@@ -82,6 +82,9 @@ class FreshRSS_View extends Minz_View {
 	public string $list_title;
 	public int $queryId;
 	public string $type;
+	/** @var null|array<array{name:string,size:int,mtime:int}> */
+	public ?array $sqliteArchives = null;
+	public string $sqlitePath;
 
 	// Form login
 	public int $cookie_days;
@@ -106,6 +109,8 @@ class FreshRSS_View extends Minz_View {
 	public string $rss_url = '';
 	public string $rss_base = '';
 	public bool $internal_rendering = false;
+	public string $description = '';
+	public string $image_url = '';
 
 	// Content preview
 	public string $fatalError;
@@ -127,5 +132,4 @@ class FreshRSS_View extends Minz_View {
 	public string $errorMessage;
 	/** @var array<string,string> */
 	public array $message;
-
 }

@@ -36,19 +36,18 @@ return [
 		'form' => 'simple',
 		'method' => 'GET',
 	],
+	'archiveIS' => [
+		'url' => 'https://archive.is/submit/?url=~LINK~',
+		'transform' => [],
+		'help' => 'https://archive.is/',
+		'form' => 'simple',
+		'method' => 'GET',
+	],
 	'archivePH' => [
 		'url' => 'https://archive.ph/submit/?url=~LINK~',
 		'transform' => [],
 		'help' => 'https://archive.ph/',
 		'form' => 'simple',
-		'method' => 'GET',
-	],
-	'blogotext' => [
-		'deprecated' => true,
-		'url' => '~URL~/admin/links.php?url=~LINK~',
-		'transform' => [],
-		'help' => 'http://lehollandaisvolant.net/blogotext/fr/',
-		'form' => 'advanced',
 		'method' => 'GET',
 	],
 	'buffer' => [
@@ -196,6 +195,12 @@ return [
 		'transform' => ['rawurlencode'],
 		'help' => 'http://sebsauvage.net/wiki/doku.php?id=php:shaarli',
 		'form' => 'advanced',
+		'method' => 'GET',
+	],
+	'telegram' => [
+		'url' => 'https://t.me/share/url?url=~LINK~&text=~TITLE~',
+		'transform' => ['rawurlencode'],
+		'form' => 'simple',
 		'method' => 'GET',
 	],
 	'twitter' => [

@@ -29,7 +29,9 @@ return array(
 			'help' => ' URL را به <a href="http://opml.org/" target="_blank">فایل OPML</a> ارائه دهید تا به صورت پویا این دسته با فیدها پر شود.',
 		),
 		'empty' => ' دسته خالی',
+		'expand' => 'Expand category',	// TODO
 		'information' => ' اطلاعات',
+		'open' => 'Open category',	// TODO
 		'opml_url' => ' URL OPML',
 		'position' => ' موقعیت نمایش',
 		'position_help' => ' برای کنترل ترتیب مرتب سازی دسته بندی',
@@ -38,7 +40,7 @@ return array(
 	'feed' => array(
 		'accept_cookies' => ' کوکی ها را بپذیرید',
 		'accept_cookies_help' => ' به سرور فید اجازه دهید تا کوکی ها را تنظیم کند (فقط برای مدت زمان درخواست در حافظه ذخیره می شود)',
-		'add' => ' یک فید RSS اضافه کنید',
+		'add' => ' یک فید اضافه کنید',
 		'advanced' => ' پیشرفته',
 		'archiving' => ' بایگانی',
 		'auth' => array(
@@ -75,10 +77,19 @@ return array(
 			'_' => ' اعمال فیلتر',
 			'help' => ' در هر خط یک فیلتر جستجو بنویسید. اپراتورها <a href="https://freshrss.github.io/FreshRSS/en/users/10_filter.html#with-the-search-field" target="_blank">مستندات را ببینید</a>.',
 		),
+		'http_headers' => 'HTTP Headers',	// TODO
+		'http_headers_help' => 'Headers are separated by a newline, and the name and value of a header are separated by a colon (e.g: <kbd><code>Accept: application/atom+xml<br />Authorization: Bearer some-token</code></kbd>).',	// TODO
 		'information' => ' اطلاعات',
 		'keep_min' => ' حداقل تعداد مقالات برای نگهداری',
 		'kind' => array(
 			'_' => ' نوع منبع خوراک',
+			'html_json' => array(
+				'_' => 'HTML + XPath + JSON dot notation (JSON in HTML)',	// TODO
+				'xpath' => array(
+					'_' => 'XPath for JSON in HTML',	// TODO
+					'help' => 'Example: <code>//script[@type="application/json"]</code>',	// TODO
+				),
+			),
 			'html_xpath' => array(
 				'_' => ' HTML + XPath (خراش دادن وب)',
 				'feed_title' => array(
@@ -135,7 +146,7 @@ return array(
 				'help' => 'A JSON dot notated uses dots between objects and brackets for arrays (e.g. <code>data.items[0].title</code>)',	// TODO
 				'item' => array(
 					'_' => 'finding news <strong>items</strong><br /><small>(most important)</small>',	// TODO
-					'help' => 'JSON path to the array containing the items, e.g. <code>newsItems</code>',	// TODO
+					'help' => 'JSON path to the array containing the items, e.g. <code>$</code> or <code>newsItems</code>',	// TODO
 				),
 				'item_author' => 'item author',	// TODO
 				'item_categories' => 'item tags',	// TODO
@@ -183,9 +194,13 @@ return array(
 		'method_help' => 'The POST payload has automatic support for <code>application/x-www-form-urlencoded</code> and <code>application/json</code>',	// TODO
 		'method_postparams' => 'Payload for POST',	// TODO
 		'moved_category_deleted' => ' هنگامی که یک دسته را حذف می کنید',
-		'mute' => ' بی صدا',
+		'mute' => array(
+			'_' => ' بی صدا',
+			'state_is_muted' => 'This feed is muted',	// TODO
+		),
 		'no_selected' => ' هیچ خوراکی انتخاب نشده است.',
 		'number_entries' => ' %d مقاله',
+		'open_feed' => 'Open feed %s',	// TODO
 		'priority' => array(
 			'_' => ' دید',
 			'archived' => ' نشان داده نشود (بایگانی شده)',
@@ -213,6 +228,16 @@ return array(
 		'title' => ' عنوان',
 		'title_add' => ' یک فید RSS اضافه کنید',
 		'ttl' => ' به‌طور خودکار بیشتر از آن رفرش نکنید',
+		'unicityCriteria' => array(
+			'_' => 'Article unicity criteria',	// TODO
+			'forced' => '<span title="Block the unicity criteria, even when the feed has duplicate articles">forced</span>',	// TODO
+			'help' => 'Relevant for invalid feeds.<br />⚠️ Changing the policy will create duplicates.',	// TODO
+			'id' => 'Standard ID (default)',	// TODO
+			'link' => 'Link',	// TODO
+			'sha1:link_published' => 'Link + Date',	// TODO
+			'sha1:link_published_title' => 'Link + Date + Title',	// TODO
+			'sha1:link_published_title_content' => 'Link + Date + Title + Content',	// TODO
+		),
 		'url' => ' URL فید',
 		'useragent' => ' عامل کاربر را برای واکشی این فید تنظیم کنید',
 		'useragent_help' => ' مثال: <kbd>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0)</kbd>',
@@ -221,7 +246,10 @@ return array(
 		'websub' => ' اطلاع رسانی فوری با WebSub',
 	),
 	'import_export' => array(
-		'export' => ' صادرات',
+		'export' => array(
+			'_' => ' صادرات',
+			'sqlite' => 'Download user database as SQLite',	// TODO
+		),
 		'export_labelled' => ' مقالات برچسب دار خود را صادر کنید',
 		'export_opml' => ' لیست صادرات فیدها (OPML)',
 		'export_starred' => ' موارد دلخواه خود را صادر کنید',

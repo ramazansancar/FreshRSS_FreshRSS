@@ -16,7 +16,7 @@ return array(
 		'title' => 'API',	// IGNORE
 	),
 	'bookmarklet' => array(
-		'documentation' => 'Перетяните эту кнопку на вашу панель закладок, или нажмите правой кнопкой мыши и выберите "Добавить ссылку в закладки". Нажимайте кнопку "Подписаться" на любой странице, на которую вы хотите подписаться.<br>',
+		'documentation' => 'Перетяните эту кнопку на вашу панель закладок, или нажмите правой кнопкой мыши и выберите "Добавить ссылку в закладки". Нажимайте кнопку "Подписаться" на любой странице, на которую вы хотите подписаться.<br />',
 		'label' => 'Подписаться',
 		'title' => 'Букмарклет',
 	),
@@ -29,7 +29,9 @@ return array(
 			'help' => 'Предоставьте ссылку на <a href="http://opml.org/" target="_blank">OPML файл</a> чтобы динамично заполнять эту категорию лентами',
 		),
 		'empty' => 'Пустая категория',
+		'expand' => 'Expand category',	// TODO
 		'information' => 'Информация',
+		'open' => 'Open category',	// TODO
 		'opml_url' => 'OPML ссылка',
 		'position' => 'Положение отображения',
 		'position_help' => 'Влияет на порядок отображения категорий',
@@ -38,7 +40,7 @@ return array(
 	'feed' => array(
 		'accept_cookies' => 'Разрешить файлы cookies',
 		'accept_cookies_help' => 'Разрешить серверу ленты использовать cookies (файлы будут храниться в памяти лишь в течение запроса)',
-		'add' => 'Добавить RSS-ленту',
+		'add' => 'Добавить ленту',
 		'advanced' => 'Дополнительно',
 		'archiving' => 'Архивирование',
 		'auth' => array(
@@ -61,7 +63,7 @@ return array(
 		'css_path' => 'CSS селектор статьи на сайте',
 		'css_path_filter' => array(
 			'_' => 'CSS селектор элемента для удаления',
-			'help' => 'CSS селектор может быть списком как: <kbd>.footer, .aside</kbd>',
+			'help' => 'CSS селектор может быть списком как: <kbd>.footer, .aside, p[data-sanitized-class="menu"]</kbd>',
 		),
 		'description' => 'Описание',
 		'empty' => 'Лента пустая. Пожалуйста, убедитесь, что её до сих пор обслуживают.',
@@ -75,10 +77,19 @@ return array(
 			'_' => 'Действия фильтрации',
 			'help' => 'Введите по одному поисковому фильтру в строке. См. <a href="https://freshrss.github.io/FreshRSS/en/users/10_filter.html#with-the-search-field" target="_blank">документацию</a>.',
 		),
+		'http_headers' => 'HTTP Headers',	// TODO
+		'http_headers_help' => 'Headers are separated by a newline, and the name and value of a header are separated by a colon (e.g: <kbd><code>Accept: application/atom+xml<br />Authorization: Bearer some-token</code></kbd>).',	// TODO
 		'information' => 'Информация',
 		'keep_min' => 'Оставлять статей не менее',
 		'kind' => array(
 			'_' => 'Тип источника ленты',
+			'html_json' => array(
+				'_' => 'HTML + XPath + JSON dot notation (JSON in HTML)',	// TODO
+				'xpath' => array(
+					'_' => 'XPath for JSON in HTML',	// TODO
+					'help' => 'Example: <code>//script[@type="application/json"]</code>',	// TODO
+				),
+			),
 			'html_xpath' => array(
 				'_' => 'HTML + XPath (парсинг веб-страниц)',
 				'feed_title' => array(
@@ -135,7 +146,7 @@ return array(
 				'help' => 'JSON с точечной нотацией использует точки между объектами и квадратные скобки для массивов (например: <code>data.items[0].title</code>)',
 				'item' => array(
 					'_' => 'Найти новые <strong>элементы</strong><br /><small>(самое важное)</small>',
-					'help' => 'JSON-путь к массиву, содержащему элементы, например: <code>newsItems</code>',
+					'help' => 'JSON-путь к массиву, содержащему элементы, например: <code>$</code> or <code>newsItems</code>',	// DIRTY
 				),
 				'item_author' => 'автор элемента',
 				'item_categories' => 'теги элемента',
@@ -183,9 +194,13 @@ return array(
 		'method_help' => 'Полезная нагрузка POST автоматически поддерживает <code>application/x-www-form-urlencoded</code> и <code>application/json</code>',
 		'method_postparams' => 'Полезная нагрузка POST',
 		'moved_category_deleted' => 'Когда вы удаляете категорию, ленты категории автоматически попадают в категорию <em>%s</em>.',
-		'mute' => 'заглушить',
+		'mute' => array(
+			'_' => 'заглушить',
+			'state_is_muted' => 'This feed is muted',	// TODO
+		),
 		'no_selected' => 'Ленты не выбраны.',
 		'number_entries' => '%d статей',
+		'open_feed' => 'Open feed %s',	// TODO
 		'priority' => array(
 			'_' => 'Видимость',
 			'archived' => 'Не показывать (архивировано)',
@@ -213,6 +228,16 @@ return array(
 		'title' => 'Заголовок',
 		'title_add' => 'Добавить RSS-ленту',
 		'ttl' => 'Не обновлять автоматически чаще, чем каждые',
+		'unicityCriteria' => array(
+			'_' => 'Article unicity criteria',	// TODO
+			'forced' => '<span title="Block the unicity criteria, even when the feed has duplicate articles">forced</span>',	// TODO
+			'help' => 'Relevant for invalid feeds.<br />⚠️ Changing the policy will create duplicates.',	// TODO
+			'id' => 'Standard ID (default)',	// TODO
+			'link' => 'Link',	// TODO
+			'sha1:link_published' => 'Link + Date',	// TODO
+			'sha1:link_published_title' => 'Link + Date + Title',	// TODO
+			'sha1:link_published_title_content' => 'Link + Date + Title + Content',	// TODO
+		),
 		'url' => 'URL ленты',
 		'useragent' => 'Указать юзерагент для извлечения лент',
 		'useragent_help' => 'Пример: <kbd>Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0)</kbd>',
@@ -221,7 +246,10 @@ return array(
 		'websub' => 'Моментальные оповещения посредством WebSub',
 	),
 	'import_export' => array(
-		'export' => 'Экспорт',
+		'export' => array(
+			'_' => 'Экспорт',
+			'sqlite' => 'Download user database as SQLite',	// TODO
+		),
 		'export_labelled' => 'Экспортировать ваши помеченные статьи',
 		'export_opml' => 'Экспортировать список лент (OPML)',
 		'export_starred' => 'Экспортировать ваше избранное',
