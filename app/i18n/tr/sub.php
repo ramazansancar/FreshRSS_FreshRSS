@@ -31,7 +31,7 @@ return array(
 		'empty' => 'Boş kategori',
 		'expand' => 'Kategoriyi genişlet',
 		'information' => 'Bilgi',
-		'open' => 'KAtegoriyi aç',
+		'open' => 'Kategoriyi aç',
 		'opml_url' => 'OPML linki',
 		'position' => 'Konumu göster',
 		'position_help' => 'Kategori sıralama düzenini kontrol etmek için',
